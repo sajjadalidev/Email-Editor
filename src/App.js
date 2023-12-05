@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 import EmailEditor from "react-email-editor";
+// import WebPageEditor from "./components/WebPageEditor";
 
 const App = (props) => {
   const emailEditorRef = useRef(null);
@@ -48,13 +49,14 @@ const App = (props) => {
   };
 
   return (
-    <div>
-      <div>
+    <>
+      <>
         <button onClick={exportHtml}>Export HTML</button>
-      </div>
-
+      </>
       <EmailEditor ref={emailEditorRef} onReady={onReady} />
-    </div>
+
+      {/* <WebPageEditor /> */}
+    </>
   );
 };
 
